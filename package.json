@@ -10,7 +10,9 @@
     "test": "ng test",
     "deploy": "npm run build & npm run ghpages",
     "server": "json-server --port 5000 --watch data.js",
-    "serve:ssr:psico-app": "node dist/psico-app/server/server.mjs"
+    "serve:ssr:psico-app": "node dist/psico-app/server/server.mjs",
+    "json:server": "json-server --watch db.json",
+    "json:server:routes": "json-server --watch db.json --router router.json"
   },
   "private": true,
   "dependencies": {
