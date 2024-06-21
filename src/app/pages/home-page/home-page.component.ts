@@ -11,4 +11,10 @@ import { RouterLink } from '@angular/router';
 })
 export class HomePageComponent {
 
+  //responsive menu option
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

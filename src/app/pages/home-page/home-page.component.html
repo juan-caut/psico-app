@@ -1,10 +1,17 @@
 <header>
-    <div>
+    <div class="header-container">
       <nav class="nav-icoapp">
-        <li class="logo"><img src="https://img.freepik.com/psd-gratis/logo-gradiente-abstracto_23-2150689640.jpg" alt="logo"></li>
-        <li class="nameapp"><a> Psicos</a></li>
+        <mat-icon class="menu-icon" href="javascript:void(0);" (click)="toggleMenu()" aria-label="Home icon" fontIcon="menu"></mat-icon>
+
+        <div class="icon-container">
+            <li class="logo"><img src="https://img.freepik.com/psd-gratis/logo-gradiente-abstracto_23-2150689640.jpg" alt="logo"></li>
+            <li class="nameapp"><a> Psicos</a></li>
+        </div>
+
+        <mat-icon class="search-icon" routerLink="/search" aria-label="Search icon" fontIcon="search"></mat-icon>
+
       </nav>
-      <nav class="nav-menu" >
+      <nav class="nav-menu" [class.show]="isMenuOpen" id="navMenu">
         <li class="item1"><a routerLink="/home">Inicio</a></li>
         <li class="item2"><a routerLink="/courses">Cursos</a></li>
         <li class="item3"><a routerLink="/community">Comunidad</a></li>
@@ -15,14 +22,14 @@
       </nav>
     </div>
      
-  </header>
+</header>
   
   <div class="main-section" id="home">
       <div class="box">
           <div class="left">
-            <div>
+            <div >
               <span class="title">
-              Bienestar emocional a tu alcanceee, en cualquier momento y lugar
+              Bienestar emocional a tu alcance, en cualquier momento y lugar
               </span>
               <p>
                 Con contenido educativo y terapéutico de excelencia, guiamos a nuestros usuarios hacia un camino de equilibrio emocional y crecimiento personal, promoviendo comunidades más saludables y conscientes a nivel global.
@@ -42,7 +49,6 @@
           
       </div>
   </div>
-  
   
   <section id="services">
   
@@ -164,7 +170,6 @@
           </div>
   
       </section>
-  
   
   </section>
   
